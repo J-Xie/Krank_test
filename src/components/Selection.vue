@@ -126,10 +126,9 @@ export default {
   margin-top: -3vw;
   width: 100%;
   max-height: 108vw;
+  overflow-y: scroll;
 }
 .single_person {
-  height: calc(100% - 237);
-  overflow-y: scroll;
   padding: 10px;
 }
 div.black_background .date_time {
