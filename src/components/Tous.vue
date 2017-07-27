@@ -10,7 +10,6 @@
 
 <script>
 export default {
-  props: ['date'],
   name: 'tous'
 }
 </script>

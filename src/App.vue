@@ -2,14 +2,16 @@
   <div id="app">
     <app-mobile-header :addZero="addZero"></app-mobile-header>
     <div id="filters" class="flex space_around">
-      <router-link @click="changeSelect('selection') " :to="'/'">
+      <router-link :to="'/'">
         SELECTION
       </router-link>
-      <router-link @click="changeSelect('tous')" :to="'/tous'">
+      <router-link :to="'/tous'">
         TOUS
       </router-link>
     </div>
-    <a href="#" class="color_blue bold" v-if="select === 'selection'">Modifier ma sélection</a>
+    <a href="#" v-if="select === 'Selection'" class="color_blue bold">
+      Modifier ma sélection
+    </a>
     <p id="today">{{date}}</p>
     <router-view></router-view>
     <app-bottom-bar></app-bottom-bar>
@@ -21,7 +23,7 @@ export default {
   data: function () {
     return {
       date: '',
-      select: 'selection'
+      select: 'Selection'
     }
   },
   created: function () {
@@ -31,10 +33,12 @@ export default {
     let year = this.addZero(today.getFullYear())
     this.date = day + '-' + month + '-' + year
   },
+  watch: {
+    '$route' (to, from) {
+      this.select = to.name
+    }
+  },
   methods: {
-    changeSelect: function (text) {
-      this.select = text
-    },
     addZero: function (num) {
       if (num < 10) {
         num = '0' + num
