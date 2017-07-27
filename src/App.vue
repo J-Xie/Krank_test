@@ -58,9 +58,17 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-#filters {
-  margin-top: 22vw;
-  margin-bottom: 2vw;
+@media screen and (max-width: 1080px) {
+  #filters {
+    margin-top: 22vw;
+    margin-bottom: 2vw;
+  }
+}
+@media screen and (min-width: 1080px) {
+  #filters {
+    margin-top: 12vw;
+    margin-bottom: 2vw;
+  }
 }
 #today {
   font-size: 40px;

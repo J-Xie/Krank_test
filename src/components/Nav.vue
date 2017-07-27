@@ -42,7 +42,7 @@ export default {
   right: 0;
   left: 0;
   bottom: 0;
-  max-height: 235px;
+  max-height: 228px;
   background-color: #F5F5F5;
   font-size: 45px;
   display: flex;

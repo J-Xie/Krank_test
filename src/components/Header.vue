@@ -59,7 +59,7 @@ export default {
   width: 100%;
   top: 0;
   padding-top: 30px;
-  min-height: 130px;
+  max-height: 100vw;
   background-color: #00ace6;
   font-size: 45px;
 }
