@@ -70,7 +70,7 @@ export default {
 }
 @media screen and (min-width: 1080px) {
   #filters {
-    margin-top: 12vw;
+    margin-top: 15vw;
     margin-bottom: 2vw;
   }
 }
